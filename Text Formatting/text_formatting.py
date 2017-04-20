@@ -41,7 +41,7 @@ def text_formatting(fin, fout, w, b):
         cur_string = b * ' '
         for i in words:
             if len(i) > w:
-                raise InputDataError('too long word')
+                raise InputDataError("too long sequence - '" + i + "'")
             elif len(i) + len(cur_string) < w:
                 cur_string += ' ' + i
             else:
